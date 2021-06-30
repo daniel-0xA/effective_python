@@ -504,14 +504,14 @@ names.append(who)
 
 * Similarly, with the `get` method:
 ```python
-names = votes.get[key]
-if name in None:
+names = votes.get(key)
+if names is None:
     votes[key] = names = []
 ```
 
 * it can be made even shorter if new assignment operator is used:
 ```python
-if (names := votes.get(key)) in None:
+if (names := votes.get(key)) is None:
     votes[key] = names = []
 ```
 
@@ -582,7 +582,7 @@ from collections import defaultdict
 
 class Visits:
     def __init__(self):
-        self.date = defaultdict(set)
+        self.data = defaultdict(set)
 
     def add(self, country, city):
         self.data[country].add(city)
@@ -590,7 +590,7 @@ class Visits:
 
 visits = Visits()
 visits.add('England', 'Bath')
-visits.add("England", "London)
+visits.add('England', 'London')
 print(visits.data)
 ```
     >>>
