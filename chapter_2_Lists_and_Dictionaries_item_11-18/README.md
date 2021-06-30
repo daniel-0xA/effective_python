@@ -339,7 +339,7 @@ from collections.abc import MutableMapping
 
 class SortedDict(MutableMapping):
     def __init__(self):
-        self.date = {}
+        self.data = {}
 
     def __getitem__(self, key):
         return self.data[key]
@@ -348,7 +348,7 @@ class SortedDict(MutableMapping):
         self.data[key] = value
     
     def __delitem__(self, key)
-        del self.date[key]
+        del self.data[key]
 
     def __iter__(self):
         keys = list(self.data.keys())
